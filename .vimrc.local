@@ -1,0 +1,11 @@
+let mapleader = "SPC"
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
+
+" support system clipboard in macos
+set clipboard=unnamed

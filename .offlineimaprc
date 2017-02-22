@@ -1,0 +1,86 @@
+[general]
+ui = TTYUI
+accounts = TRS
+pythonfile = ~/.mutt/source/offlineimap.py
+fsync = False
+
+[Account TRS]
+localrepository = TRS-Local
+remoterepository = TRS-Remote
+status_backend = sqlite
+#postsynchook = notmuch new
+# Minutes between syncs, use mu4e to refresh
+autorefresh = 0
+# Number of quick-syncs between autorefreshes. Quick-syncs do not update if the
+# only changes were to IMAP flags
+quick = 10
+
+[Repository TRS-Local]
+type = Maildir
+#localfolders = ~/.mutt/mails/lu.jianmei/
+localfolders = ~/Maildir/lu.jianmei/
+#nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')
+#nametrans = lambda folder : {'drafts':   '草稿箱',
+#                            'inbox':     'Inbox',
+#                            'sent':     '已发送',
+##                            'flagged':  '[TRS]/Starred',
+#                            'trs':  'trs',
+#                            'haier':  'haier',
+#                            'pm':  'pm',
+##                            'trash':    '[TRS]/Bin',
+#                            'archive':  'All Mail',
+##                           }.get(folder.decode('imap4-utf-7').encode('utf-8'), folder.decode('imap4-utf-7').encode('utf-8'))
+#                           }.get(folder.decode('imap4-utf-7').encode('utf-8'), folder.decode('imap4-utf-7').encode('utf-8'))
+
+[Repository TRS-Remote]
+#Sslcacertfile=/etc/ssl/certs/ca-certificates.crt
+sslcacertfile =  /Users/kevin/.spacemacs.d/ca-bundle.crt
+maxconnections = 2
+type = IMAP
+auth = on
+ssl = on
+#reference = Mail
+remotehost = imap.qiye.163.com
+remoteuser = lu.jianmei@trs.com.cn
+remotepass=ljm_07102049610
+# imap protocol port: 993 for ssl, 143 for none ssl
+remoteport = 993
+
+#remotepasseval = get_gpg_pass(keyfile="/home/kevin/.mutt/.my-pwds.gpg")
+realdelete = no
+
+
+#folderfilter = lambda folder: folder not in ['/Bin', '/Spam','[TRS]/akamai','[TRS]/errors','[TRS]/me','[TRS]/nagios']
+# use offlineimap --info can know the remote folders. (following two unknow name is 已发送 and 草稿箱 and 已删除)
+#folderfilter = lambda folder: folder in ['INBOX','trs','haier','pm','me','&XfJT0ZAB-','&g0l6P3ux-','Sent','&XfJSIJZk-']
+folderfilter = lambda folder: folder in ['INBOX','trs','haier','pm','me','Sent']
+
+startdate = 2015-01-01
+# solve foldername encoding, for supporting chinese foldername in remote server
+# foldername: foldername.decode('imap4-utf-7').encode('utf-8')
+#nametrans = lambda folder: foldername.decode('imap4-utf-7').encode('utf-8') : {'Drafts':     'drafts',
+#nametrans = lambda x: 'INBOX.' + x
+nametrans = lambda folder: folder.decode('imap4-utf-7').encode('utf-8')
+###nametrans = lambda folder : {'草稿箱':     'drafts',
+###                            'INBOX':  'inbox',
+###                            '已发送':  'sent',
+####                            '[TRS]/Starred':    'flagged',
+###                            'trs':    'trs',
+###                            'haier':    'haier',
+###                            'pm':    'pm',
+####                            'Bin':        'trash',
+###                            'All Mail':   'archive',
+####                           }.get(folder.decode('imap4-utf-7').encode('utf-8'), folder.decode('imap4-utf-7').encode('utf-8'))
+###                           }.get(folder, folder.decode('imap4-utf-7').encode('utf-8'))
+
+# Instead of closing the connection once a sync is complete, offlineimap will
+# send empty data to the server to hold the connection open. A value of 60
+# attempts to hold the connection for a minute between syncs (both quick and
+# autorefresh).This setting has no effect if autorefresh and holdconnectionopen
+# are not both set.
+keepalive = 60
+# OfflineIMAP normally closes IMAP server connections between refreshes if
+# the global option autorefresh is specified.  If you wish it to keep the
+# connection open, set this to true. This setting has no effect if autorefresh
+# is not set.
+holdconnectionopen = yes
