@@ -54,7 +54,7 @@ export ANT_HOME=/Users/kevin/develop/apache-ant-1.9.4/
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/workspace/github/django
 
-
+# source ~/dotfiles-mac/.tmux/tmuxinator.zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -356,7 +356,57 @@ export MOZILLA_FIVE_HOME=/usr/lib/mozilla
 export GVM_DIR="/home/kevin/.gvm"
 [[ -s "/home/kevin/.gvm/bin/gvm-init.sh" ]] && source "/home/kevin/.gvm/bin/gvm-init.sh"
 
+# add percol support for zsh
+function exists { which $1 &> /dev/null }
+
+if exists percol; then
+    function percol_select_history() {
+        local tac
+        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
+        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+        CURSOR=$#BUFFER         # move cursor
+        zle -R -c               # refresh
+    }
+
+    zle -N percol_select_history
+    bindkey '^R' percol_select_history
+fi
+function ppgrep() {
+    if [[ $1 == "" ]]; then
+        PERCOL=percol
+    else
+        PERCOL="percol --query $1"
+    fi
+    ps aux | eval $PERCOL | awk '{ print $2 }'
+}
+function pattach() {
+    if [[ $1 == "" ]]; then
+        PERCOL=percol
+    else
+        PERCOL="percol --query $1"
+    fi
+
+    sessions=$(tmux ls)
+    [ $? -ne 0 ] && return
+
+    session=$(echo $sessions | eval $PERCOL | cut -d : -f 1)
+    if [[ -n "$session" ]]; then
+        tmux att -t $session
+    fi
+}
+function ppkill() {
+    if [[ $1 =~ "^-" ]]; then
+        QUERY=""            # options only
+    else
+        QUERY=$1            # with a query
+        [[ $# > 0 ]] && shift
+    fi
+    ppgrep $QUERY | xargs kill $*
+}
+
+
 
 
 
 source /usr/local/bin/virtualenvwrapper.sh
+
