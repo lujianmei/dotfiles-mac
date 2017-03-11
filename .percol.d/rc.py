@@ -29,13 +29,13 @@ percol.import_keymap({
 })
 
 # Change prompt in response to the status of case sensitivity
-percol.view.__class__.PROMPT = property(
-    lambda self:
-    ur"<bold><blue>QUERY </blue>[a]:</bold> %q" if percol.model.finder.case_insensitive
-    else ur"<bold><green>QUERY </green>[A]:</bold> %q"
-)
+#percol.view.__class__.PROMPT = property(
+#    lambda self:
+#    ur"<bold><blue>QUERY </blue>[a]:</bold> %q" if percol.model.finder.case_insensitive
+#    else ur"<bold><green>QUERY </green>[A]:</bold> %q"
+#)
 
 percol.view.CANDIDATES_LINE_BASIC    = ("on_default", "default")
 percol.view.CANDIDATES_LINE_SELECTED = ("underline", "on_yellow", "white")
-percol.view.CANDIDATES_LINE_MARKED   = ("bold", "on_cyan", "black")
+percol.view.CANDIDATES_LINE_MARKED   = ("bold", "on_yellow", "black")
 percol.view.CANDIDATES_LINE_QUERY    = ("yellow", "bold")

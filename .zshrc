@@ -102,7 +102,8 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump emacs github z brew brew-cask github osx mvn)
+#plugins=(git autojump emacs github z brew brew-cask github osx mvn tmux adb docker docker-compose python virtualenv virtualenvwrapper web-search)
+plugins=(git autojump emacs github z github osx mvn tmux adb docker python virtualenv virtualenvwrapper web-search)
 
 # User configuration
 
