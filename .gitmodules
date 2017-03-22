@@ -7,3 +7,6 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = git@github.com:lujianmei/.tmux.git
+[submodule ".hammerspoon"]
+	path = .hammerspoon
+	url = git@github.com:lujianmei/awesome-hammerspoon.git
