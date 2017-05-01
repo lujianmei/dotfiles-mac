@@ -19,6 +19,7 @@ export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
 
+export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
 export DYLD_LIBRARY_PATH=/Users/kevin/workspace/instantclient_11_2
 
 # move from .bashrc
@@ -112,8 +113,9 @@ export PATH="$haskell_home/bin:/sbin:/bin:$gopath/bin/:/usr/local/sbin/:/usr/loc
 # export manpath="/usr/local/man:$manpath"
 
 export SVN_EDITOR REQUEST_METHOD LD_LIBRARY_PATH CASK GREP_OPTION
-
-export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME\bin"
+export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
+export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
+export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME/bin:$DOCKER_HOME/bin:$ECLIPSE_HOME"
 
 source $ZSH/oh-my-zsh.sh
 

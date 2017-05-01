@@ -11,7 +11,7 @@ let g:spacevim_plugin_bundle_dir = '~/.cache/vimfiles/'
 " let g:spacevim_colorscheme = 'jellybeans'
 
 " Set plugin manager, you want to use, default is dein.vim
-let g:spacevim_plugin_manager = 'dein'  " neobundle or dein or vim-plug
+let g:spacevim_plugin_manager = 'vim-plug'  " neobundle or dein or vim-plug
 
 
 " use space as `<Leader>`
@@ -33,9 +33,9 @@ call SpaceVim#layers#load('ui')
 
 " If there is a particular plugin you don't like, you can define this
 " variable to disable them entirely:
-let g:spacevim_disabled_plugins=[
-    \ ['junegunn/fzf.vim'],
-    \ ]
+""'let g:spacevim_disabled_plugins=[
+""    \ ['junegunn/fzf.vim'],
+""    \ ]
 
 " If you want to add some custom plugins, use these options:
 let g:spacevim_custom_plugins = [

@@ -1,0 +1,66 @@
+// This file contains the keybindings that are used for Power Format Pack.
+// Here you can assign new shortcuts. Please keep in mind
+// that there is no check for duplicate keybindings. This means that when
+// a keybinding is already taken by either your OS, Anki, this addon, or some
+// other running program, the result is undefined.
+//
+// This file needs to contain valid JSON. Basically this means that
+// the key-value pairs should be enclosed in double quotes:
+// "key": "value"
+// The opening and closing braces { and } are mandatory. Each key-value pair
+// should contain a colon : and should end with a comma, except for the last
+// pair.
+//
+// Invalid JSON cannot be parsed and will result in the use of the default
+// keybindings. If you find that your new keybindings don't work (i.e. they
+// don't show up in Anki, despite you changing this file), please use
+// a JSON validator to check for faulty JSON.
+//
+// Modifier keys that can be used include: the function keys (F1 through F12),
+// Ctrl, Alt, Shift, ASCII alphanumeric characters, and ASCII punctuation
+// characters. For Mac OS X, be advised that Ctrl maps to the Cmd key (or
+// "Apple key"), NOT to Ctrl. If you want to use the Ctrl modifier on Mac OS X,
+// use Meta instead. So, Ctrl+Shift+[ on Linux or Windows maps to Meta+Shift+[
+// on Mac OS X. Ctrl+Shift+[ on Mac OS X will require you to type Cmd+Shift+[
+// in Anki. Please make sure you understand this before opening bug reports.
+//
+// The use of an invalid key sequence will silently revert the sequence to the
+// default setting. For example, invalid sequences are:
+//
+// * only modifier keys: Ctrl+Shift
+// * empty sequences
+// * non-existing modifier keys: Ctrl+Iota+j
+//
+// The order or case of the keys is unimportant. Ctrl+Alt+p is the same as
+// ALT+CTRL+P or even p+Ctrl+Alt.
+//
+// If you want to revert your changes to the default keybindings provided by
+// Power Format Pack, please remove this JSON file in your addon
+// folder.
+
+{
+    "abbreviation": "shift+alt+a",
+    "background_color": "ctrl+shift+b",
+    "background_color_change": "ctrl+shift+n",
+    "blockquote": "ctrl+shift+y",
+    "code": "ctrl+shift+,",
+    "definition_list": "ctrl+shift+d",
+    "heading": "ctrl+alt+1",
+    "horizontal_rule": "ctrl+shift+alt+_",
+    "hyperlink": "ctrl+shift+h",
+    "indent": "ctrl+shift+]",
+    "keyboard": "ctrl+shift+k",
+    "markdown": "ctrl+shift+0",
+    "ordered_list": "ctrl+]",
+    "outdent": "ctrl+shift+[",
+    "pre": "ctrl+shift+.",
+    "remove_hyperlink": "ctrl+shift+alt+h",
+    "strikethrough": "alt+shift+5",
+    "table": "ctrl+shift+3",
+    "text_align_centered": "ctrl+shift+alt+b",
+    "text_align_flush_left": "ctrl+shift+alt+l",
+    "text_align_flush_right": "ctrl+shift+alt+r",
+    "text_align_justified": "ctrl+shift+alt+s",
+    "unordered_list": "ctrl+[",
+    "_version": "0.8.8.3"
+}
