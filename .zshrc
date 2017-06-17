@@ -117,6 +117,8 @@ export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
 export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
 export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME/bin:$DOCKER_HOME/bin:$ECLIPSE_HOME"
 
+# add npm install for global
+export PATH="$HOME/.npm-packages/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
