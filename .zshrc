@@ -1,61 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kevin/.oh-my-zsh
-#export Anaconda3=/home/kevin/Programe/anaconda3/bin
-#export IDEA_HOME=/home/kevin/software/develop/idea-IU-139.659.2/
-#export JETTY_HOME=/home/kevin/software/develop/jetty-distribution-9.3.1.v20150714/
-#export ACTIVE_HOME=/home/kevin/software/apache-activemq-5.11.1/
-#export MAKE381_HOME=/home/kevin/software/make381/
-# JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
-#export JAVA_HOME=/home/kevin/software/jdk-8u51-linux-x64/jdk1.8.0_51/
-#export JAVA_HOME=/home/kevin/software/develop/jdk1.6.0_45/
-#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
-#export JAVA_HOME=/home/kevin/software/develop/jdk1.7.0_25
-export DOCKER_HOST=tcp://127.0.0.1:4243
-export HASKELL_HOME=/Users/kevin/Library/Haskell
-export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
-export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
-export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
-
-#export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
-#export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
-
-export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
-export DYLD_LIBRARY_PATH=/Users/kevin/workspace/instantclient_11_2
-
-# move from .bashrc
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-#export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++
-
-#export editor=/usr/bin/ec
-#export cheatcolors=true
-#ruby=/home/kevin/.gem/ruby/2.1.0/bin
-
-
-export ANACONDA_HOME=/Users/kevin/Library/anaconda
-
-
-
-
-
-# User specific environment and startup programs
-
-#export GRADLE_HOME=/home/kevin/software/develop/android/gradle-1.12
-
-export GOPATH=~/.go
-export RUBY=/usr/local/Cellar/ruby/2.2.3/bin
-export GEM_HOME=$HOME/.gem
-
-export ANDROID_HOME=/Users/kevin/develop/android/android-sdk-mac
-export ANDROID_NDK_HOME=/Users/kevin/develop/android/android-ndk-r10e
-export ANT_HOME=/Users/kevin/develop/apache-ant-1.9.4/
-#export EDITOR=nvim
-
-
-export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/workspace/github/django
-
-# source ~/dotfiles-mac/.tmux/tmuxinator.zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -104,17 +48,80 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git autojump emacs github z brew brew-cask github osx mvn tmux adb docker docker-compose python virtualenv virtualenvwrapper web-search)
-plugins=(git autojump emacs github z github osx mvn tmux adb docker python virtualenv virtualenvwrapper web-search)
+plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwrapper)
 
 # User configuration
 
+#export Anaconda3=/home/kevin/Programe/anaconda3/bin
+#export IDEA_HOME=/home/kevin/software/develop/idea-IU-139.659.2/
+#export JETTY_HOME=/home/kevin/software/develop/jetty-distribution-9.3.1.v20150714/
+#export ACTIVE_HOME=/home/kevin/software/apache-activemq-5.11.1/
+#export MAKE381_HOME=/home/kevin/software/make381/
+# JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
+#export JAVA_HOME=/home/kevin/software/jdk-8u51-linux-x64/jdk1.8.0_51/
+#export JAVA_HOME=/home/kevin/software/develop/jdk1.6.0_45/
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+#export JAVA_HOME=/home/kevin/software/develop/jdk1.7.0_25
+#export DOCKER_HOST=tcp://127.0.0.1:4243
+export HASKELL_HOME=/Users/kevin/Library/Haskell
+export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
+export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
+export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
+
+#export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
+#export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
+
+export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
+export DYLD_LIBRARY_PATH=/Users/kevin/workspace/instantclient_11_2
+export PG_HOME=/Users/kevin/develop/PostgreSQL/
+#export PGDATA=/opt/postgresql/data
+#export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3.6"
+#
+# move from .bashrc
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+#export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++
+
+#export editor=/usr/bin/ec
+#export cheatcolors=true
+#ruby=/home/kevin/.gem/ruby/2.1.0/bin
+
+export ANACONDA_HOME=/Users/kevin/Library/anaconda
+# User specific environment and startup programs
+
+#export GRADLE_HOME=/home/kevin/software/develop/android/gradle-1.12
+
+export GOPATH=~/.go
+export RUBY=/usr/local/Cellar/ruby/2.2.3/bin
+export GEM_HOME=$HOME/.gem
+
+export ANDROID_HOME=/Users/kevin/develop/android/android-sdk-mac
+export ANDROID_NDK_HOME=/Users/kevin/develop/android/android-ndk-r10e
+export ANT_HOME=/Users/kevin/develop/apache-ant-1.9.4/
+export EDITOR=nvim
+
+
+#export WORKON_HOME=~/.virtualenvs
+
+export PROJECT_HOME=~/workspace/github/django
+
+
+# Use the proper paths based on your installation
+export MYSQLXPB_PROTOBUF_INCLUDE_DIR=/usr/local/opt/protobuf/include
+export MYSQLXPB_PROTOBUF_LIB_DIR=/usr/local/opt/protobuf/lib
+export MYSQLXPB_PROTOC=/usr/local/opt/protobuf/bin/protoc
+#
+# source ~/dotfiles-mac/.tmux/tmuxinator.zsh
+
+export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
+export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
+
 #export path="$haskell_home/bin:$java_homebin:$make381_home/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kevin/archlinux-config/shell/:$anaconda3:$idea_home/bin/:$jetty_home/bin/:$active_home/bin"
-export PATH="$haskell_home/bin:/sbin:/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:/usr/bin/:$anaconda_home/bin:/usr/sbin/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.5.0/bin"
+export PATH="/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/"
 # export manpath="/usr/local/man:$manpath"
 
 export SVN_EDITOR REQUEST_METHOD LD_LIBRARY_PATH CASK GREP_OPTION
-export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
-export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
 export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME/bin:$DOCKER_HOME/bin:$ECLIPSE_HOME"
 
 # add npm install for global
@@ -133,6 +140,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export editor='nvim'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -143,7 +151,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
- alias zshconfig="mate ~/.zshrc"
+alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="nvim"
@@ -322,7 +330,7 @@ paclist() {
 
 alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 pacdisowned() {
   tmp=${TMPDIR-/tmp}/pacman-disowned-$UID-$$
   db=$tmp/db
@@ -356,10 +364,6 @@ pacmansignkeys() {
   done
 }
 export MOZILLA_FIVE_HOME=/usr/lib/mozilla
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-export GVM_DIR="/home/kevin/.gvm"
-[[ -s "/home/kevin/.gvm/bin/gvm-init.sh" ]] && source "/home/kevin/.gvm/bin/gvm-init.sh"
 
 # add percol support for zsh
 function exists { which $1 &> /dev/null }
@@ -410,6 +414,10 @@ function ppkill() {
 }
 
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+export GVM_DIR="/home/kevin/.gvm"
+[[ -s "/home/kevin/.gvm/bin/gvm-init.sh" ]] && source "/home/kevin/.gvm/bin/gvm-init.sh"
 
 
 
