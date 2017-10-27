@@ -33,7 +33,7 @@ spacemacs="${root}/.spacemacs.d/"
 tmux="${root}/.tmux"
 hammerspoon="${root}/.hammerspoon"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
-org_html_theme="${root}/.spacemacs.d/third-plugins/org-html-themes/"
+org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
 erd_mode="${root}/.spacemacs.d/private/erd-mode"
 
 not_push_to_remote(){
