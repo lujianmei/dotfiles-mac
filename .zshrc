@@ -112,7 +112,6 @@ export MYSQLXPB_PROTOBUF_INCLUDE_DIR=/usr/local/opt/protobuf/include
 export MYSQLXPB_PROTOBUF_LIB_DIR=/usr/local/opt/protobuf/lib
 export MYSQLXPB_PROTOC=/usr/local/opt/protobuf/bin/protoc
 #
-# source ~/dotfiles-mac/.tmux/tmuxinator.zsh
 
 export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
 export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
@@ -423,3 +422,4 @@ export GVM_DIR="/home/kevin/.gvm"
 
 source /usr/local/bin/virtualenvwrapper.sh
 
+source ~/dotfiles-mac/.tmux/tmuxinator.zsh
