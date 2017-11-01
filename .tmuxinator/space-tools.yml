@@ -44,10 +44,11 @@ root: ~/
 
 windows: 
     - emacs:
+        - sudo nginx
         - cd ~/.emacs.d
         - git pull origin develop
     - spacevim:
-        - cd ~/.SpaceVim.d
+        - cd ~/.SpaceVim
         - git pull 
     - jupyter:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
