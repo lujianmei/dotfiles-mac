@@ -1,5 +1,4 @@
-# ~/.tmuxinator/mac.yml
-
+# ~/.tmuxinator/python-projects.yml
 name: python
 root: ~/workspace/github/python-projects
 
@@ -43,16 +42,28 @@ root: ~/workspace/github/python-projects
 # post: tmux -CC attach -t mac
 
 windows: 
-  - env36:
-      - cd python-demo/env36
-      - source bin/activate
-  - env27:
-      - cd python-demo/env27
-      - source bin/activate
- - django:
+  #- env27:
+  #    - cd python-demo/env27
+  #    - source ~/workspace/github/python-projects/env27/bin/activate
+  - django:
      - cd django
-     - source bin/activate
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+     - source ~/workspace/github/python-projects/env36/bin/activate
+  - handbook:
+     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/PythonDataScienceHandbook
+     - source ~/workspace/github/python-projects/env36/bin/activate
+  - datascience:
+     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/R_Python_ForDataScience
+     - source ~/workspace/github/python-projects/env36/bin/activate
+  - roadmap:
+     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/data-scientist-roadmap
+     - source ~/workspace/github/python-projects/env36/bin/activate
+
+
+
+
+
+
+      
+    # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
-  

@@ -53,9 +53,12 @@ windows:
     - jupyter:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
         - jupyter notebook
-    - server:
+    - jekyll:
         - cd ~/workspace/github/my-blog/
         - bundle exec jekyll serve
+    - lisp-lein:
+        - cd ~/workspace/github/lisp-projects
+        - lein repl
     - dotfiles:
         root: ~/dotfiles-mac
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
