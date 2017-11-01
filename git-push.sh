@@ -34,7 +34,6 @@ tmux="${root}/.tmux"
 hammerspoon="${root}/.hammerspoon"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
 org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
-erd_mode="${root}/.spacemacs.d/private/erd-mode"
 
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
@@ -42,11 +41,6 @@ not_push_to_remote(){
     git add .
     git commit -m $comment_message
 
-
-    echo "going to ${erd_mode}"
-    cd $erd_mode
-    git add .
-    git commit -m $comment_message
 
     echo "going to ${chinese_fonts}"
     cd $chinese_fonts
@@ -78,12 +72,6 @@ not_push_to_remote(){
 push_to_remote(){
     echo "going to ${org_html_themes}"
     cd $org_html_themes
-    git add .
-    git commit -m $comment_message
-    git push origin master
-
-    echo "going to ${erd_mode}"
-    cd $erd_mode
     git add .
     git commit -m $comment_message
     git push origin master
