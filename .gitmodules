@@ -6,4 +6,4 @@
 	url = https://github.com/lujianmei/.tmux.git
 [submodule ".hammerspoon"]
 	path = .hammerspoon
-	url = https://github.com/lujianmei/awesome-hammerspoon.git
+	url = https://github.com/lujianmei/.hammerspoon.git
