@@ -1,6 +1,6 @@
-# ~/.tmuxinator/space-tools.yml
+# ~/.tmuxinator/mac.yml
 
-name: tools
+name: editor
 root: ~/
 
 # Optional tmux socket
@@ -20,6 +20,7 @@ root: ~/
 # on_project_exit: command
 # Run on project stop
 # on_project_stop: command
+
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -43,23 +44,14 @@ root: ~/
 # post: tmux -CC attach -t mac
 
 windows: 
-    - update:
-        - sudo nginx
-        - cd ~/.emacs.d
-        - git pull origin develop
-        - cd ~/.SpaceVim
-        - git pull 
-        - cd ~/dotfiles-mac
-    - jupyter:
-        - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
-        - source ~/workspace/github/python-projects/env36/bin/activate
-        - jupyter notebook
-    - jekyll:
-        - cd ~/workspace/github/my-blog/
-        - bundle exec jekyll serve
-    - lisp-lein:
-        - cd ~/workspace/github/lisp-projects
-        - lein repl
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+  - ranger: ranger
+  - vim:
+      - cd ~/
+      - vim
+  - emacs: emacs -nw
+    #- /usr/local/Cellar/emacs-plus/25.3/bin/emacs -nw
+     # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
+      #
+      #

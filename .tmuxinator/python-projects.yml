@@ -45,6 +45,7 @@ windows:
   #- env27:
   #    - cd python-demo/env27
   #    - source ~/workspace/github/python-projects/env27/bin/activate
+  - ipython: ipython
   - django:
      - cd django
      - source ~/workspace/github/python-projects/env36/bin/activate

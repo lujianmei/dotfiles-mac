@@ -31,9 +31,10 @@ root: ~/
 # post: tmux -CC attach -t editors
 
 windows:
+    - server-tools: tmuxinator start server-tools
     - my-blog: tmuxinator start my-blog
     - python: tmuxinator start python-projects
-    - space-tools: tmuxinator start space-tools
+    - editors: tmuxinator start editors
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after

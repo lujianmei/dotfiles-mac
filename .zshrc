@@ -157,9 +157,9 @@ alias vim="nvim"
 alias v="nvim"
 # alias newemacs="/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/dotemacs/init.el --eval \"(run-hooks 'after-init-hook)\""
 
-
-alias e="/usr/local/Cellar/emacs/25.1/bin/emacsclient -c"
-alias ec="/usr/local/Cellar/emacs/25.1/bin/emacsclient -c"
+alias es="/usr/local/Cellar/emacs-plus/25.3/bin/emacs --eval \"(setq server-name \"x\")\" --daemon"
+alias e="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
+alias ec="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 
 
 alias grep="/usr/bin/grep $GREP_OPTIONS"
