@@ -7,8 +7,22 @@ export ZSH=/Users/kevin/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="muse"
 #ZSH_THEME="avit"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="ys"
+ZSH_THEME="bullet-train"
 
+# config for Theme Bullet-Train
+# check detail at: https://github.com/caiogondim/bullet-train.zsh
+BULLETTRAIN_PROMPT_ORDER=(
+    time
+    dir
+    git
+    #    context
+    virtualenv
+    #nvm
+    ruby
+)
+BULLETTRAIN_CUSTOM_MSG=false
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -153,8 +167,10 @@ export editor='nvim'
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim="nvim"
-alias v="nvim"
+alias n="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
+alias nv="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
+alias vi="/usr/local/Cellar/vim/8.0.1250/bin/vim"
+alias v="/usr/local/Cellar/vim/8.0.1250/bin/vim"
 # alias newemacs="/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/dotemacs/init.el --eval \"(run-hooks 'after-init-hook)\""
 
 alias es="/usr/local/Cellar/emacs-plus/25.3/bin/emacs --eval \"(setq server-name \"x\")\" --daemon"
@@ -423,3 +439,4 @@ export GVM_DIR="/home/kevin/.gvm"
 source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/dotfiles-mac/.tmux/tmuxinator.zsh
+

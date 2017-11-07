@@ -49,7 +49,12 @@ windows:
         - git pull origin develop
         - cd ~/.SpaceVim
         - git pull 
+        - cd ~/.oh-my-zsh
+        - git pull 
         - cd ~/dotfiles-mac
+        - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:8888
+        - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:4000
+
     - jupyter:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
         - source ~/workspace/github/python-projects/env36/bin/activate

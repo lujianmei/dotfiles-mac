@@ -8,7 +8,7 @@ let g:spacevim_plugin_bundle_dir = '~/.vimfiles'
 " >
 "   let g:spacevim_checkinstall = 1
 " <
-let g:spacevim_checkinstall            = 0
+let g:spacevim_checkinstall            = 1
 let g:spacevim_enable_debug = 0
 " do not automatically update
 let g:spacevim_automatic_update = 0
@@ -43,10 +43,10 @@ let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_os_fileformat_icon = 1
 let g:spacevim_buffer_index_type = 1
 let g:neomake_vim_enabled_makers = ['vimlint', 'vint']
-if has('python3')
-    let g:ctrlp_map = ''
-    nnoremap <silent> <C-p> :Denite file_rec<CR>
-endif
+" if has('python3')
+"     let g:ctrlp_map = ''
+"     nnoremap <silent> <C-p> :Denite file_rec<CR>
+" endif
 let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
