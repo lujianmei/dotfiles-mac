@@ -22,7 +22,6 @@ BULLETTRAIN_PROMPT_ORDER=(
     #nvm
     ruby
 )
-BULLETTRAIN_CUSTOM_MSG=false
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

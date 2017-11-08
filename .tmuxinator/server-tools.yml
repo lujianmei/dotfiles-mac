@@ -59,9 +59,9 @@ windows:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
         - source ~/workspace/github/python-projects/env36/bin/activate
         - jupyter notebook
-    - jekyll:
-        - cd ~/workspace/github/my-blog/
-        - bundle exec jekyll serve
+    # - jekyll:
+    #     - cd ~/workspace/github/my-blog/
+    #     - bundle exec jekyll serve
     - lisp-lein:
         - cd ~/workspace/github/lisp-projects
         - lein repl
