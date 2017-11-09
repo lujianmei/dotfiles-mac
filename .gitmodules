@@ -7,3 +7,6 @@
 [submodule ".hammerspoon"]
 	path = .hammerspoon
 	url = https://github.com/lujianmei/.hammerspoon.git
+[submodule ".spacevim.d"]
+	path = .spacevim.d
+	url = https://github.com/lujianmei/.spacevim.d

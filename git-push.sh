@@ -30,6 +30,7 @@ else
 fi
 root="/Users/kevin/dotfiles-mac"
 spacemacs="${root}/.spacemacs.d/"
+spacevim="${root}/.spacevim.d/"
 tmux="${root}/.tmux"
 hammerspoon="${root}/.hammerspoon"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
@@ -56,6 +57,12 @@ not_push_to_remote(){
     cd $tmux
     git add .
     git commit -m $comment_message
+
+    echo "going to ${spacevim}"
+    cd $spacevim
+    git add .
+    git commit -m $comment_message
+
 
     echo "going to ${spacemacs}"
     cd $spacemacs
@@ -90,6 +97,12 @@ push_to_remote(){
 
     echo "going to ${tmux}"
     cd $tmux
+    git add .
+    git commit -m $comment_message
+    git push origin master
+
+    echo "going to ${spacevim}"
+    cd $spacevim
     git add .
     git commit -m $comment_message
     git push origin master
