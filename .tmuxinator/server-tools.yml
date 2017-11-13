@@ -55,16 +55,19 @@ windows:
         - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:8888
         - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:4000
 
+    # open jupyter notebook server
     - jupyter:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
         - source ~/workspace/github/python-projects/env36/bin/activate
         - jupyter notebook
+    # open github ghpage render server
     # - jekyll:
     #     - cd ~/workspace/github/my-blog/
     #     - bundle exec jekyll serve
-    - lisp-lein:
-        - cd ~/workspace/github/lisp-projects
-        - lein repl
+    # open lisp lein
+    # - lisp-lein:
+        # - cd ~/workspace/github/lisp-projects
+        # - lein repl
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
