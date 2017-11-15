@@ -45,19 +45,28 @@ windows:
   #- env27:
   #    - cd python-demo/env27
   #    - source ~/workspace/github/python-projects/env27/bin/activate
-  - ipython: ipython
-  - django:
-     - cd django
-     - source ~/workspace/github/python-projects/env36/bin/activate
-  - handbook:
-     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/PythonDataScienceHandbook
-     - source ~/workspace/github/python-projects/env36/bin/activate
-  - datascience:
-     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/R_Python_ForDataScience
-     - source ~/workspace/github/python-projects/env36/bin/activate
-  - roadmap:
-     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/data-scientist-roadmap
-     - source ~/workspace/github/python-projects/env36/bin/activate
+  - data-science: 
+      - cd ~/workspace/github/work-env/docker-jupyter-notebooks
+      # re-build all docker images, and not push onto docker cloud 
+      # - make build-test-all
+      # re-build all docker images, and push onto docker cloud 
+      # - make release-all
+      # start current docker by docker compose shell script, using https, and send a password for notebook server
+      # - NAME=my-notebook PORT=8888 WORK_VOLUME=/Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes data-science-notebook/up.sh  --secure --password trsadmin
+      # start current docker by docker compose shell script, using http, with a password
+      - NAME=my-notebook PORT=8888 WORK_VOLUME=/Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes data-science-notebook/up.sh --password trsadmin 
+  # - django:
+  #    - cd django
+  #    - source ~/workspace/github/python-projects/env36/bin/activate
+  # - handbook:
+  #    - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/PythonDataScienceHandbook
+  #    - source ~/workspace/github/python-projects/env36/bin/activate
+  # - datascience:
+  #    - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/R_Python_ForDataScience
+  #    - source ~/workspace/github/python-projects/env36/bin/activate
+  # - roadmap:
+  #    - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes/data-scientist-roadmap
+  #    - source ~/workspace/github/python-projects/env36/bin/activate
 
 
 

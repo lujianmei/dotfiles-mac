@@ -439,3 +439,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/dotfiles-mac/.tmux/tmuxinator.zsh
 
+
+# added by travis gem
+[ -f /Users/kevin/.travis/travis.sh ] && source /Users/kevin/.travis/travis.sh

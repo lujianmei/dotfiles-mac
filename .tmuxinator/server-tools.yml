@@ -55,19 +55,51 @@ windows:
         - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:8888
         - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:4000
 
-    # open jupyter notebook server
+ # ========================================
+    # open local jupyter notebook server
+ # ========================================
+    # - jupyter:
+    #     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
+    #     - source ~/workspace/github/python-projects/env36/bin/activate
+    #     - jupyter notebook
+
+    # Open a jupyter notbook scientific python stack in a docker
+    # check detail : https://hub.docker.com/r/jupyter/scipy-notebook/
     - jupyter:
         - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
-        - source ~/workspace/github/python-projects/env36/bin/activate
-        - jupyter notebook
+        # for basic using
+        - docker run -it --rm -p 8888:8888 jupyter/scipy-notebook -v /Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes:/home/kevin/workspace/github/data-scientist-notes
+        # for setting the base URL of the notebook server, run the following:
+    # - jupyter:
+        # - docker run -d -p 8888:8888 jupyter/scipy-notebook start-notebook.sh --NotebookApp.base_url=~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
+        # for disable all authentication mechanisms
+    # - jupyter:
+        # - docker run -d -p 8888:8888 jupyter/scipy-notebook start-notebook.sh --NotebookApp.token=''
+        # for start an ipython console in a container
+    # - jupyter:
+        # - docker run -it --rm jupyter/scipy-notebook start.sh ipython
+
+# ========================================
     # open github ghpage render server
+# ========================================
     # - jekyll:
     #     - cd ~/workspace/github/my-blog/
+
+# ========================================
     #     - bundle exec jekyll serve
+# ========================================
     # open lisp lein
     # - lisp-lein:
         # - cd ~/workspace/github/lisp-projects
         # - lein repl
+        
+ # ========================================
+    # open mysql container
+    - mysql:
+        # see command detail: https://hub.docker.com/r/library/mysql/
+        - docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=trsadmin -d mysql:8.0.3
+
+ # ========================================
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
