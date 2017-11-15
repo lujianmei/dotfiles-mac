@@ -54,7 +54,8 @@ windows:
       # start current docker by docker compose shell script, using https, and send a password for notebook server
       # - NAME=my-notebook PORT=8888 WORK_VOLUME=/Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes data-science-notebook/up.sh  --secure --password trsadmin
       # start current docker by docker compose shell script, using http, with a password
-      - NAME=my-notebook PORT=8888 WORK_VOLUME=/Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes data-science-notebook/up.sh --password trsadmin 
+      - NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes data-science-notebook/up.sh
+
   # - django:
   #    - cd django
   #    - source ~/workspace/github/python-projects/env36/bin/activate
