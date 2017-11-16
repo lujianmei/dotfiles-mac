@@ -45,9 +45,10 @@ windows:
   #- env27:
   #    - cd python-demo/env27
   #    - source ~/workspace/github/python-projects/env27/bin/activate
+  # waiting for docker finish startup, and then use docker exec to login into container for other operations
   - ternimal:
       - sleep 3m
-      - docker attach my-notebook
+      - docker exec -it my-notebook /bin/bash
   # - django:
   #    - cd django
   #    - source ~/workspace/github/python-projects/env36/bin/activate

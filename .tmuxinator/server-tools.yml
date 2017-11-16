@@ -68,15 +68,15 @@ windows:
         # - docker run -it --rm jupyter/scipy-notebook start.sh ipython
     # do not use local jupyter anymore, instead of docker container
     - data-science: 
-      - cd ~/dotfiles-mac/work-envs/data-sciences-env
+      - cd ~/dotfiles-mac/work-envs/data-science-env
       # re-build all docker images, and not push onto docker cloud 
       # - make build-test-all
       # re-build all docker images, and push onto docker cloud 
       # - make release-all
       # start current docker by docker compose shell script, using https, and send a password for notebook server
-      # - NAME=my-notebook PORT=8888 WORK_VOLUME=/Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes data-science-notebook/up.sh  --secure --password trsadmin
-      # start current docker by docker compose shell script, using http, with a password
       - NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes data-science-notebook/up.sh
+      # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
+      # - docker attach my-notebook
 
 
 # ========================================
@@ -110,7 +110,7 @@ windows:
         - git pull 
         - cd ~/dotfiles-mac
         - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:8888
-        - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:4000
+        # - /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://www.test.com:4000
 
 
  # ========================================
