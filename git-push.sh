@@ -36,7 +36,6 @@ hammerspoon="${root}/spacehammer"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
 org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
 data="${root}/work-envs/data-science-env/"
-work-envs="${root}/work-envs/"
 
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
@@ -52,11 +51,6 @@ not_push_to_remote(){
 
     echo "going to ${data-science-env}"
     cd $data-science-env
-    git add .
-    git commit -m $comment_message
-
-    echo "going to ${work-envs}"
-    cd $work-envs
     git add .
     git commit -m $comment_message
 
@@ -104,12 +98,6 @@ push_to_remote(){
 
     echo "going to ${data-science-env}"
     cd $data-science-env
-    git add .
-    git commit -m $comment_message
-    git push origin master
-
-    echo "going to ${work-envs}"
-    cd $work-envs
     git add .
     git commit -m $comment_message
     git push origin master

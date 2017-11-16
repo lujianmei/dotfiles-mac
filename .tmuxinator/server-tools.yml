@@ -68,7 +68,7 @@ windows:
         # - docker run -it --rm jupyter/scipy-notebook start.sh ipython
     # do not use local jupyter anymore, instead of docker container
     - data-science: 
-      - cd ~/dotfiles-mac/work-envs/data-sciences
+      - cd ~/dotfiles-mac/work-envs/data-sciences-env
       # re-build all docker images, and not push onto docker cloud 
       # - make build-test-all
       # re-build all docker images, and push onto docker cloud 
