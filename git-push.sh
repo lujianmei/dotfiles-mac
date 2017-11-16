@@ -35,7 +35,7 @@ tmux="${root}/.tmux"
 hammerspoon="${root}/spacehammer"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
 org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
-data-science-env="${root}/work-envs/data-science-env/"
+data_science_env="${root}/work-envs/data-science-env/"
 
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
@@ -49,8 +49,8 @@ not_push_to_remote(){
     git add .
     git commit -m $comment_message
 
-    echo "going to ${data-science-env}"
-    cd $data-science-env
+    echo "going to ${data_science_env}"
+    cd $data_science_env
     git add .
     git commit -m $comment_message
 
@@ -96,8 +96,8 @@ push_to_remote(){
     git commit -m $comment_message
     git push origin master
 
-    echo "going to ${data-science-env}"
-    cd $data-science-env
+    echo "going to ${data_science_env}"
+    cd $data_science_env
     git add .
     git commit -m $comment_message
     git push origin master
