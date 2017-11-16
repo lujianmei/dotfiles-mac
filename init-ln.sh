@@ -18,6 +18,6 @@ ln -s ~/$main_dir/.spacevim/ ~/.vim
 ln -s ~/$main_dir/.gemrc ~/.gemrc
 ln -s ~/$main_dir/.jupyter ~/.jupyter
 ln -s ~/$main_dir/.lein ~/.lein
-ln -s ~/$main_dir/.hammerspoon ~/.hammerspoon
+ln -s ~/$main_dir/spacehamer ~/.hammerspoon
 ln -s ~/$main_dir/.percol.d ~/.percol.d
 
