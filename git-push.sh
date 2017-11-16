@@ -35,7 +35,7 @@ tmux="${root}/.tmux"
 hammerspoon="${root}/spacehammer"
 chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
 org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
-data="${root}/work-envs/data-science-env/"
+data-science-env="${root}/work-envs/data-science-env/"
 
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
