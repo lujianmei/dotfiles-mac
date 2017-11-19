@@ -1,2 +1,4 @@
 /work-envs/gpdb-docker/*.tar.gz
+/work-envs/gpdb-docker/*.zip
 *.tar.gz
+*.zip
