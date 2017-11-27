@@ -176,7 +176,7 @@ alias es="/usr/local/Cellar/emacs-plus/25.3/bin/emacs --eval \"(setq server-name
 alias e="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 alias ec="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 
-
+alias start-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes data-science-notebook/up.sh"
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 
 

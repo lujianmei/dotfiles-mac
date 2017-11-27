@@ -49,7 +49,10 @@ windows:
   - ternimal:
       - sleep 3m
       - docker exec -it my-notebook /bin/bash
-  # - django:
+  - ternimal:
+      - sleep 3m
+      - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"
+ # - django:
   #    - cd django
   #    - source ~/workspace/github/python-projects/env36/bin/activate
   # - handbook:
