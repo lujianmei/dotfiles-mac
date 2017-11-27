@@ -16,7 +16,7 @@
 # DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 
 #IMAGES=$@
-IMAGES="jupyter/scipy-notebook:latest mysql:5.7"
+IMAGES="postgres lujianmei/data-science-notebook node ubuntu centos mysql"
 
 echo "This will remove all your current containers and images except for:"
 echo ${IMAGES}
