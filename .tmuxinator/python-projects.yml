@@ -46,12 +46,17 @@ windows:
   #    - cd python-demo/env27
   #    - source ~/workspace/github/python-projects/env27/bin/activate
   # waiting for docker finish startup, and then use docker exec to login into container for other operations
-  - ternimal:
+  - python-docker:
       - sleep 3m
       - docker exec -it my-notebook /bin/bash
-  - ternimal:
+  - postgres-docker:
       - sleep 3m
       - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"
+  - mongodb-docker:
+      - sleep 3m
+      # - docker exec -it my-notebook-mongo mongo admin
+      - docker exec -it my-notebook-mongo mongo admin
+      # - docker run -it --rm --link my-notebook-mongo:mongo mongo mongo -u kevin -p trsadmin --authenticationDatabase admin my-notebook-mongo/scrapy-database
  # - django:
   #    - cd django
   #    - source ~/workspace/github/python-projects/env36/bin/activate
