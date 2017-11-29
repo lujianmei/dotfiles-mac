@@ -16,3 +16,6 @@
 [submodule "work-envs/gpdb-docker"]
 	path = work-envs/gpdb-docker
 	url = https://github.com/lujianmei/gpdb-docker.git
+[submodule "work-envs/kubeform"]
+	path = work-envs/kubeform
+	url = https://github.com/lujianmei/kubeform
