@@ -46,9 +46,12 @@ windows:
   #    - cd python-demo/env27
   #    - source ~/workspace/github/python-projects/env27/bin/activate
   # waiting for docker finish startup, and then use docker exec to login into container for other operations
-  - python-docker:
+  - python36-docker:
       - sleep 3m
       - docker exec -it my-notebook /bin/bash
+  - python27-docker:
+      - sleep 3m
+      - docker exec -it scrapy-app /bin/bash
   - postgres-docker:
       - sleep 3m
       - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"
