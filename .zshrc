@@ -179,8 +179,8 @@ alias ec="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 alias start-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=v2 data-science-notebook/up.sh"
 alias stop-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=v2 data-science-notebook/down.sh"
 alias grep="/usr/bin/grep $GREP_OPTIONS"
-alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=last scrapy-app/scrapy-up.sh"
-alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=last scrapy-app/scrapy-down.sh"
+alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-up.sh"
+alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-down.sh"
 
 
 LD_LIBRARY_PATH=/usr/local/lib
