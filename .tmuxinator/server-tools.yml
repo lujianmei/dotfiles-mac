@@ -78,6 +78,11 @@ windows:
       # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
       # - docker attach my-notebook
 
+      # start a python27 environment for scrapy
+    - scrapy-app: 
+      - cd ~/dotfiles-mac/work-envs/data-science-env
+      - NAME=scrapy-app PORT=8080 WORK_VOLUME=scrapy-notes NOTEBOOK_IMAGE_VERSION=latest scrapy-app/scrapy-up.sh
+
 
 # ========================================
     # open github ghpage render server
