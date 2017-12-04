@@ -50,15 +50,15 @@ windows:
       - sleep 3m
       - docker exec -it my-notebook /bin/bash
   - python27-docker:
-      - sleep 3m
+      - sleep 4m
       - docker exec -it scrapy-app /bin/bash
   - postgres-docker:
       - sleep 3m
       - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"
   - mongodb-docker:
-      - sleep 3m
+      - sleep 5m
       # - docker exec -it my-notebook-mongo mongo admin
-      - docker exec -it my-notebook-mongo mongo admin
+      - docker exec -it scrapy-app-mongo mongo admin
       # - docker run -it --rm --link my-notebook-mongo:mongo mongo mongo -u kevin -p trsadmin --authenticationDatabase admin my-notebook-mongo/scrapy-database
  # - django:
   #    - cd django
