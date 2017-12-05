@@ -74,17 +74,17 @@ windows:
       # re-build all docker images, and push onto docker cloud 
       # - make release-all
       # start current docker by docker compose shell script, using https, and send a password for notebook server
-      - NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=v2 data-science-notebook/up.sh
+      - NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=latest data-science-notebook/up.sh
       # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
       # - docker exec for attaching my-notebook
       - sleep 1m
       - docker exec -it my-notebook /bin/bash
   # waiting for docker finish startup, and then use docker exec to login into container for other operations
   - postgres-docker:
-      - sleep 3m
+      - sleep 5m
       - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"
   - mongodb-docker:
-      - sleep 5m
+      - sleep 6m
       # - docker exec -it my-notebook-mongo mongo admin
       - docker exec -it my-notebook-mongo mongo admin
       # - docker run -it --rm --link my-notebook-mongo:mongo mongo mongo -u kevin -p trsadmin --authenticationDatabase admin my-notebook-mongo/scrapy-database
@@ -94,11 +94,11 @@ windows:
 ###   # start a python27 environment for scrapy
 ################################
     
-  - scrapy-app: 
-      - cd ~/dotfiles-mac/work-envs/data-science-env
-      - NAME=scrapy-app PORT=8080 WORK_VOLUME=scrapy-notes NOTEBOOK_IMAGE_VERSION=latest scrapy-app/scrapy-up.sh
-      - sleep 1m
-      - docker exec -it scrapy-app /bin/bash
+  # - scrapy-app: 
+  #     - cd ~/dotfiles-mac/work-envs/data-science-env
+  #     - NAME=scrapy-app PORT=8080 WORK_VOLUME=scrapy-notes NOTEBOOK_IMAGE_VERSION=latest scrapy-app/scrapy-up.sh
+  #     - sleep 1m
+  #     - docker exec -it scrapy-app /bin/bash
 
 
 
