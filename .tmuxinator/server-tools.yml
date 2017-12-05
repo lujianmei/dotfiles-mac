@@ -43,47 +43,6 @@ root: ~/
 # post: tmux -CC attach -t mac
 
 windows: 
- # ========================================
-    # open local jupyter notebook server
- # ========================================
-    # - jupyter:
-    #     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
-    #     - source ~/workspace/github/python-projects/env36/bin/activate
-    #     - jupyter notebook
-
-    # Open a jupyter notbook scientific python stack in a docker
-    # check detail : https://hub.docker.com/r/jupyter/scipy-notebook/
-    # - jupyter:
-    #     - cd ~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
-    #     # for basic using
-    #     - docker run -it --rm -p 8888:8888 jupyter/scipy-notebook -v /Users/kevin/workspace/github/my-blog/work-notes/notes/data-scientist-notes:/home/kevin/workspace/github/data-scientist-notes
-        # for setting the base URL of the notebook server, run the following:
-    # - jupyter:
-        # - docker run -d -p 8888:8888 jupyter/scipy-notebook start-notebook.sh --NotebookApp.base_url=~/workspace/github/my-blog/work-notes/notes/data-scientist-notes
-        # for disable all authentication mechanisms
-    # - jupyter:
-        # - docker run -d -p 8888:8888 jupyter/scipy-notebook start-notebook.sh --NotebookApp.token=''
-        # for start an ipython console in a container
-    # - jupyter:
-        # - docker run -it --rm jupyter/scipy-notebook start.sh ipython
-    # do not use local jupyter anymore, instead of docker container
-    - data-science: 
-      - cd ~/dotfiles-mac/work-envs/data-science-env
-      # re-build all docker images, and not push onto docker cloud 
-      # - make build-test-all
-      # re-build all docker images, and push onto docker cloud 
-      # - make release-all
-      # start current docker by docker compose shell script, using https, and send a password for notebook server
-      - NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=v2 data-science-notebook/up.sh
-      # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
-      # - docker attach my-notebook
-
-      # start a python27 environment for scrapy
-    - scrapy-app: 
-      - cd ~/dotfiles-mac/work-envs/data-science-env
-      - NAME=scrapy-app PORT=8080 WORK_VOLUME=scrapy-notes NOTEBOOK_IMAGE_VERSION=latest scrapy-app/scrapy-up.sh
-
-
 # ========================================
     # open github ghpage render server
 # ========================================
