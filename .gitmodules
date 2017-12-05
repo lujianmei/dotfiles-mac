@@ -19,3 +19,6 @@
 [submodule "work-envs/kubeform"]
 	path = work-envs/kubeform
 	url = https://github.com/lujianmei/kubeform
+[submodule "work-envs/kubernetes-vagrant-coreos-cluster"]
+	path = work-envs/kubernetes-vagrant-coreos-cluster
+	url = git@github.com:lujianmei/kubernetes-vagrant-coreos-cluster.git
