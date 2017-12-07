@@ -22,3 +22,9 @@
 [submodule "work-envs/kubernetes-vagrant-coreos-cluster"]
 	path = work-envs/kubernetes-vagrant-coreos-cluster
 	url = git@github.com:lujianmei/kubernetes-vagrant-coreos-cluster.git
+[submodule "work-envs/kubernetes-docker-library"]
+	path = work-envs/kubernetes-docker-library
+	url = https://github.com/lujianmei/docker-library
+[submodule "work-envs/k8s-core-infrastructure"]
+	path = work-envs/k8s-core-infrastructure
+	url = https://github.com/lujianmei/k8s-core-infrastructure
