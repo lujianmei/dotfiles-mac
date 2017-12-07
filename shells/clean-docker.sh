@@ -16,7 +16,7 @@
 # DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 
 #IMAGES=$@
-IMAGES="postgres python:2.7 python:latest sitespeedio/graphite mongo redis node ubuntu centos:7 mysql"
+IMAGES="postgres python:2.7 python:latest sitespeedio/graphite mongo redis node jupyter/datascience-notebook ubuntu centos:7 mysql lujianmei/data-science-notebook lujianmei/scrapy-app "
 
 echo "This will remove all your current containers and images except for:"
 echo ${IMAGES}
