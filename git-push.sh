@@ -37,7 +37,7 @@ chinese_fonts="${root}/.spacemacs.d/third-plugins/chinese-fonts-setup/"
 org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
 data_science_env="${root}/work-envs/data-science-env/"
 kubernetes_docker_library="${root}/work-envs/kubernetes-docker-library"
-k8s_core_infrustructure="${root}/work-envs/k8s-core-infrustructure"
+k8s_core_infrustructure="${root}/work-envs/k8s-core-infrastructure"
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
     cd $org_html_themes
