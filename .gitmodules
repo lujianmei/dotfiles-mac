@@ -16,12 +16,6 @@
 [submodule "work-envs/gpdb-docker"]
 	path = work-envs/gpdb-docker
 	url = https://github.com/lujianmei/gpdb-docker.git
-[submodule "work-envs/kubeform"]
-	path = work-envs/kubeform
-	url = https://github.com/lujianmei/kubeform
-[submodule "work-envs/kubernetes-vagrant-coreos-cluster"]
-	path = work-envs/kubernetes-vagrant-coreos-cluster
-	url = git@github.com:lujianmei/kubernetes-vagrant-coreos-cluster.git
 [submodule "work-envs/kubernetes-docker-library"]
 	path = work-envs/kubernetes-docker-library
 	url = https://github.com/lujianmei/docker-library
