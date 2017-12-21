@@ -22,3 +22,6 @@
 [submodule "work-envs/k8s-core-infrastructure"]
 	path = work-envs/k8s-core-infrastructure
 	url = https://github.com/lujianmei/k8s-core-infrastructure
+[submodule "work-envs/openshift-ansible"]
+	path = work-envs/openshift-ansible
+	url = https://github.com/lujianmei/openshift-ansible
