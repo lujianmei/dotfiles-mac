@@ -182,7 +182,7 @@ alias grep="/usr/bin/grep $GREP_OPTIONS"
 alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-up.sh"
 alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-down.sh"
 
-
+alias bfg="java -jar ~/develop/bfg-1.12.16.jar "
 LD_LIBRARY_PATH=/usr/local/lib
 
 unset GREP_OPTIONS
