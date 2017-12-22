@@ -4,6 +4,10 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/lujianmei/.tmux.git
+[submodule ".mutt"]
+	path = .mutt
+	url = https://github.com/lujianmei/.mutt.git
+
 [submodule ".spacevim.d"]
 	path = .spacevim.d
 	url = https://github.com/lujianmei/.spacevim.d
