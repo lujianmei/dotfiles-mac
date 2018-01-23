@@ -80,7 +80,7 @@ export HASKELL_HOME=/Users/kevin/Library/Haskell
 export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
 export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
 export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
-
+export EMACS=/usr/local/Cellar/emacs-plus/25.3/
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
 
@@ -130,7 +130,7 @@ export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
 export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
 
 #export path="$haskell_home/bin:$java_homebin:$make381_home/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kevin/archlinux-config/shell/:$anaconda3:$idea_home/bin/:$jetty_home/bin/:$active_home/bin"
-export PATH="/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/"
+export PATH="/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
 # export manpath="/usr/local/man:$manpath"
 
 export SVN_EDITOR REQUEST_METHOD LD_LIBRARY_PATH CASK GREP_OPTION
@@ -182,6 +182,7 @@ alias grep="/usr/bin/grep $GREP_OPTIONS"
 alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-up.sh"
 alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-down.sh"
 
+alias sm="ssh trs@192.168.1.75"
 alias bfg="java -jar ~/develop/bfg-1.12.16.jar "
 LD_LIBRARY_PATH=/usr/local/lib
 

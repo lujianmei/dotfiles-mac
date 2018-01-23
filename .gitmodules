@@ -29,3 +29,6 @@
 [submodule "work-envs/k8s-core-infrastructure"]
 	path = work-envs/k8s-core-infrastructure
 	url = https://github.com/lujianmei/k8s-core-infrastructure
+[submodule "work-envs/docker-jira-bitbucket-gitlab"]
+	path = work-envs/docker-jira-bitbucket-gitlab
+	url = https://github.com/lujianmei/docker-jira-bitbucket-gitlab
