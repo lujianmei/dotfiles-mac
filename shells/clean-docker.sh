@@ -16,8 +16,8 @@
 # DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 
 #IMAGES=$@
-IMAGES="postgres python:2.7 python:latest sitespeedio/graphite mongo redis node jupyter/datascience-notebook ubuntu centos:7 mysql lujianmei/data-science-notebook lujianmei/scrapy-app "
-
+# IMAGES="postgres python:2.7 python:latest sitespeedio/graphite mongo redis node jupyter/datascience-notebook ubuntu centos:7 mysql lujianmei/data-science-notebook lujianmei/scrapy-app "
+IMAGES="lujianmei/kera-jupyter jupyter/scipy-notebook postgres lujianmei/scrapy-app lujianmei/data-science-notebook redis jupyter/datascience-notebook postgres python mongo java sitespeedio/graphite hasura/hyperkube"
 echo "This will remove all your current containers and images except for:"
 echo ${IMAGES}
 read -p "Are you sure? [yes/NO] " -n 1 -r
