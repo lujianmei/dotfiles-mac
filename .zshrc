@@ -168,8 +168,10 @@ alias zshconfig="mate ~/.zshrc"
 
 alias n="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
 alias nv="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
-alias vi="/usr/local/Cellar/vim/8.0.1250/bin/vim"
-alias v="/usr/local/Cellar/vim/8.0.1250/bin/vim"
+alias v="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
+alias vi="/usr/local/Cellar/neovim/0.2.0_1/bin/nvim"
+# alias vi="/usr/local/Cellar/vim/8.0.1250/bin/vim"
+# alias v="/usr/local/Cellar/vim/8.0.1250/bin/vim"
 # alias newemacs="/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/dotemacs/init.el --eval \"(run-hooks 'after-init-hook)\""
 
 alias es="/usr/local/Cellar/emacs-plus/25.3/bin/emacs --eval \"(setq server-name \"x\")\" --daemon"
@@ -181,6 +183,9 @@ alias stop-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-not
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-up.sh"
 alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=lastest scrapy-app/scrapy-down.sh"
+alias start-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=9999 WORK_VOLUME=kera-notes SCRAPY_IMAGE_VERSION=lastest kera-jupyter/up.sh"
+alias stop-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=9999 WORK_VOLUME=kera-notes SCRAPY_IMAGE_VERSION=lastest kera-jupyter/down.sh"
+
 
 alias sm="ssh trs@192.168.1.75"
 alias bfg="java -jar ~/develop/bfg-1.12.16.jar "

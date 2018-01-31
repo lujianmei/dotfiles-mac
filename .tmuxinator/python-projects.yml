@@ -80,6 +80,19 @@ windows:
       - sleep 1m
       - docker exec -it my-notebook /bin/bash
   # waiting for docker finish startup, and then use docker exec to login into container for other operations
+  - kera-jupyter: 
+      - cd ~/dotfiles-mac/work-envs/data-science-env
+      # re-build all docker images, and not push onto docker cloud 
+      # - make build-test-all
+      # re-build all docker images, and push onto docker cloud 
+      # - make release-all
+      # start current docker by docker compose shell script, using https, and send a password for notebook server
+      - NAME=my-kera-jupyter PORT=9999 WORK_VOLUME=kera-jupyter NOTEBOOK_IMAGE_VERSION=latest kera-jupyter/up.sh
+      # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
+      # - docker exec for attaching my-notebook
+      - sleep 1m
+      - docker exec -it my-kera-jupyter /bin/bash
+
   - postgres-docker:
       - sleep 5m
       - docker exec -it my-notebook-postgres /bin/bash -c "su postgres"

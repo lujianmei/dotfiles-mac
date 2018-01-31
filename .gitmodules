@@ -32,6 +32,3 @@
 [submodule "work-envs/docker-jira-bitbucket-gitlab"]
 	path = work-envs/docker-jira-bitbucket-gitlab
 	url = https://github.com/lujianmei/docker-jira-bitbucket-gitlab
-[submodule "work-envs/keras-jupyter-docker"]
-	path = work-envs/keras-jupyter-docker
-	url = https://github.com/lujianmei/keras-jupyter-docker.git
