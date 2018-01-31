@@ -38,6 +38,7 @@ org_html_themes="${root}/.spacemacs.d/third-plugins/org-html-themes/"
 data_science_env="${root}/work-envs/data-science-env/"
 kubernetes_docker_library="${root}/work-envs/kubernetes-docker-library"
 k8s_core_infrustructure="${root}/work-envs/k8s-core-infrastructure"
+keras_jupyter_docker="${root}/work-envs/keras_jupyter_docker"
 not_push_to_remote(){
     echo "going to ${org_html_themes}"
     cd $org_html_themes
@@ -55,6 +56,12 @@ not_push_to_remote(){
     git add .
     git commit -m $comment_message
 
+    echo "going to ${keras_jupyter_docker}"
+    cd $keras_jupyter_docker
+    git add .
+    git commit -m $comment_message
+
+ 
     echo "going to ${kubernetes_docker_library}"
     cd $kubernetes_docker_library
     git add .
@@ -107,6 +114,13 @@ push_to_remote(){
     git add .
     git commit -m $comment_message
     git push origin master
+
+    echo "going to ${keras_jupyter_docker}"
+    cd $keras_jupyter_docker
+    git add .
+    git commit -m $comment_message
+    git push origin master
+
 
     echo "going to ${data_science_env}"
     cd $data_science_env
