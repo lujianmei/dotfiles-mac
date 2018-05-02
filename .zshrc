@@ -4,12 +4,12 @@ export ZSH=/Users/kevin/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="muse"
 #ZSH_THEME="avit"
 #ZSH_THEME="agnoster"
-ZSH_THEME="ys"
-ZSH_THEME="bullet-train"
+# ZSH_THEME="ys"
+# ZSH_THEME="bullet-train"
 
 # config for Theme Bullet-Train
 # check detail at: https://github.com/caiogondim/bullet-train.zsh
@@ -80,7 +80,7 @@ export HASKELL_HOME=/Users/kevin/Library/Haskell
 export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
 export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
 export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
-export EMACS=/usr/local/Cellar/emacs-plus/25.3/
+export EMACS=/usr/local/Cellar/emacs-plus/25.3/bin/emacs-25.3
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
 
@@ -128,6 +128,7 @@ export MYSQLXPB_PROTOC=/usr/local/opt/protobuf/bin/protoc
 
 export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
 export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
+export GOPATH="$HOME/.go/"
 
 #export path="$haskell_home/bin:$java_homebin:$make381_home/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kevin/archlinux-config/shell/:$anaconda3:$idea_home/bin/:$jetty_home/bin/:$active_home/bin"
 export PATH="/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
@@ -185,6 +186,8 @@ alias start-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrap
 alias stop-scrapy-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=scrapy PORT=8080 WORK_VOLUME=scrapy-notes SCRAPY_IMAGE_VERSION=latest scrapy-app/scrapy-down.sh"
 alias start-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=kera-jupyter PORT=9999 WORK_VOLUME=kera-notes KERA_IMAGE_VERSION=latest kera-jupyter/kera-up.sh"
 alias stop-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=kera-jupyter PORT=9999 WORK_VOLUME=kera-notes KERA_IMAGE_VERSION=latest kera-jupyter/kera-down.sh"
+alias start-metabase-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=metabase PORT=3000 WORK_VOLUME=metabase NOTEBOOK_IMAGE_VERSION=latest metabase-app/up.sh"
+alias stop-metabase-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=metabase PORT=3000 WORK_VOLUME=metabase NOTEBOOK_IMAGE_VERSION=latest metabase-app/down.sh"
 
 
 alias sm="ssh trs@192.168.1.75"

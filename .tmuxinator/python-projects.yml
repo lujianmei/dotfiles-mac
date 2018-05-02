@@ -91,7 +91,7 @@ windows:
       # showing logs window of the jupyter notebook, it will close the container when there is a close of this command 
       # - docker exec for attaching my-notebook
       - sleep 1m
-      - docker exec -it my-kera-jupyter /bin/bash
+      - docker exec -it kera-jupyter /bin/bash
 
   - postgres-docker:
       - sleep 5m
