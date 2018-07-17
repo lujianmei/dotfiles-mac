@@ -32,3 +32,6 @@
 [submodule "work-envs/docker-jira-bitbucket-gitlab"]
 	path = work-envs/docker-jira-bitbucket-gitlab
 	url = https://github.com/lujianmei/docker-jira-bitbucket-gitlab
+[submodule "work-envs/python-vagrant-centos7"]
+	path = work-envs/python-vagrant-centos7
+	url = https://github.com/lujianmei/python-vagrant-centos7
