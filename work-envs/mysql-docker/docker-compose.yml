@@ -1,0 +1,28 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mysql-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/mysql-data/:/var/lib/mysql"
+     - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: trsadmin
+
+  adminer:
+    image: adminer
+    restart: always
+    links:
+      - "mysql-db:db"
+    environment:
+      ADMINER_PLUGINS: 'tables-filter tinymce'
+      ADMINER_DESIGN: 'nette'
+    ports:
+      - 8085:8080

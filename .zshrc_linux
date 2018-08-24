@@ -1,16 +1,15 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/kevin/.oh-my-zsh
+export ZSH=/data/kevin/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
- ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="muse"
 #ZSH_THEME="avit"
 #ZSH_THEME="agnoster"
 # ZSH_THEME="ys"
 # ZSH_THEME="bullet-train"
-# ZSH_THEME="blinks"
 
 # config for Theme Bullet-Train
 # check detail at: https://github.com/caiogondim/bullet-train.zsh
@@ -62,7 +61,7 @@ BULLETTRAIN_PROMPT_ORDER=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git autojump emacs github z brew brew-cask github osx mvn tmux adb docker docker-compose python virtualenv virtualenvwrapper web-search)
-plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwrapper django)
+plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwrapper)
 
 # User configuration
 
@@ -77,7 +76,7 @@ plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwr
 #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 #export JAVA_HOME=/home/kevin/software/develop/jdk1.7.0_25
 #export DOCKER_HOST=tcp://127.0.0.1:4243
-export HASKELL_HOME=/Users/kevin/Library/Haskell
+export HASKELL_HOME=/data/kevin/Library/Haskell
 export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
 export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
 export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
@@ -86,8 +85,8 @@ export EMACS=/usr/local/Cellar/emacs-plus/25.3/bin/emacs-25.3
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
 
 export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
-export DYLD_LIBRARY_PATH=/Users/kevin/workspace/instantclient_11_2
-export PG_HOME=/Users/kevin/develop/PostgreSQL/
+export DYLD_LIBRARY_PATH=/data/kevin/workspace/instantclient_11_2
+export PG_HOME=/data/kevin/develop/PostgreSQL/
 #export PGDATA=/opt/postgresql/data
 #export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
 export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3.6"
@@ -101,30 +100,19 @@ export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3.6"
 #export cheatcolors=true
 #ruby=/home/kevin/.gem/ruby/2.1.0/bin
 
-export ANACONDA_HOME=/Users/kevin/Library/anaconda
+export ANACONDA_HOME=/data/kevin/Library/anaconda
 # User specific environment and startup programs
 
-export GRADLE_HOME=/usr/local/Cellar/gradle/4.9/
+#export GRADLE_HOME=/home/kevin/software/develop/android/gradle-1.12
 
 export GOPATH=~/.go
 export RUBY=/usr/local/Cellar/ruby/2.2.3/bin
 export GEM_HOME=$HOME/.gem
-export SPRING_ROO_HOME=~/workspace/spring-roo-2.0.0.RELEASE/
 
-export ANDROID_HOME=/Users/kevin/develop/android/android-sdk-mac
-export ANDROID_NDK_HOME=/Users/kevin/develop/android/android-ndk-r10e
-export ANT_HOME=/Users/kevin/develop/apache-ant-1.9.4/
+export ANDROID_HOME=/data/kevin/develop/android/android-sdk-mac
+export ANDROID_NDK_HOME=/data/kevin/develop/android/android-ndk-r10e
+export ANT_HOME=/data/kevin/develop/apache-ant-1.9.4/
 export EDITOR=nvim
-#添加JDK的环境变量
-export JAVA_6_HOME=/Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Home
-export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-#默认JDK1.7
-export JAVA_HOME=$JAVA_8_HOME
-#alias命令动态切换JDK版本  
-alias jdk6="export JAVA_HOME=$JAVA_6_HOME"  
-alias jdk7="export JAVA_HOME=$JAVA_7_HOME"
-alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 
 
 #export WORKON_HOME=~/.virtualenvs
@@ -143,7 +131,7 @@ export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
 export GOPATH="$HOME/.go/"
 
 #export path="$haskell_home/bin:$java_homebin:$make381_home/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kevin/archlinux-config/shell/:$anaconda3:$idea_home/bin/:$jetty_home/bin/:$active_home/bin"
-export PATH="$SPRING_ROO_HOME/bin:$GRADLE_HOME/bin:/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
+export PATH="/data/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
 # export manpath="/usr/local/man:$manpath"
 
 export SVN_EDITOR REQUEST_METHOD LD_LIBRARY_PATH CASK GREP_OPTION
@@ -192,7 +180,6 @@ alias e="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 alias ec="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
 alias aliyunk="ssh kevin@39.104.118.30"
 alias aliyunr="ssh root@39.104.118.30"
-alias aliyunt="ssh trs@39.104.118.30"
 
 alias start-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=latest data-science-notebook/up.sh"
 alias stop-python-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=my-notebook PORT=8888 WORK_VOLUME=data-scientist-notes NOTEBOOK_IMAGE_VERSION=latest data-science-notebook/down.sh"
@@ -203,7 +190,6 @@ alias start-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=kera-ju
 alias stop-kera-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=kera-jupyter PORT=9999 WORK_VOLUME=kera-notes KERA_IMAGE_VERSION=latest kera-jupyter/kera-down.sh"
 alias start-metabase-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=metabase PORT=3000 WORK_VOLUME=metabase NOTEBOOK_IMAGE_VERSION=latest metabase-app/up.sh"
 alias stop-metabase-env="cd ~/dotfiles-mac/work-envs/data-science-env; NAME=metabase PORT=3000 WORK_VOLUME=metabase NOTEBOOK_IMAGE_VERSION=latest metabase-app/down.sh"
-alias start-mysql-env="cd ~/dotfiles-mac/work-envs/mysql-docker; docker-compose up"
 
 
 alias sm="ssh trs@192.168.1.75"
@@ -250,7 +236,7 @@ memacs_quick(){
 /usr/local/Cellar/emacs/24.5/bin/emacsclient -t -a "" $@
 }
 mproxy(){
-/Users/kevin/study-material/mysheel/mproxy.sh
+/data/kevin/study-material/mysheel/mproxy.sh
 }
 lsal()
 {
@@ -469,5 +455,4 @@ source ~/dotfiles-mac/.tmux/tmuxinator.zsh
 
 
 # added by travis gem
-[ -f /Users/kevin/.travis/travis.sh ] && source /Users/kevin/.travis/travis.sh
-export IDEA_PROPERTIES=/Users/kevin/idea.properties
+[ -f /data/kevin/.travis/travis.sh ] && source /data/kevin/.travis/travis.sh
