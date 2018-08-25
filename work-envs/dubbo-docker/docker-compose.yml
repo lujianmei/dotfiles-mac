@@ -1,0 +1,20 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+ dubbo-admin:
+    image: chenchuxin/dubbo-admin
+    # volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     # - "/Users/kevin/bigdata/mysql-data/:/var/lib/mysql"
+     # - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
+    ports:
+      - 8881:8080
+    environment:
+      dubbo.registry.address: zookeeper://127.0.0.1:2181
+      dubbo.admin.root.password: root
+      dubbo.admin.guest.password: guest
+      # 运行成功后，稍等一下，访问ip:port即可。
+# 默认账号密码是
+# 管理员：root：root
+# 游客：guest：guest
