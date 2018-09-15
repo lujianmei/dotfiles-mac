@@ -25,4 +25,4 @@ services:
       ADMINER_PLUGINS: 'tables-filter tinymce'
       ADMINER_DESIGN: 'nette'
     ports:
-      - 8085:8080
+      - 8085:8085

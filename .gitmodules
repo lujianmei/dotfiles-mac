@@ -35,3 +35,6 @@
 [submodule "work-envs/python-vagrant-centos7"]
 	path = work-envs/python-vagrant-centos7
 	url = https://github.com/lujianmei/python-vagrant-centos7
+[submodule "work-envs/greenplum-docker"]
+	path = work-envs/greenplum-docker
+	url = git@github.com:lujianmei/greenplum-docker.git

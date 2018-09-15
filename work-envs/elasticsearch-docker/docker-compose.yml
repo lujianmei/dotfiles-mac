@@ -1,0 +1,23 @@
+# Use root/example as user/password credentials
+version: '2'
+
+services:
+  kibana:
+    image: kibana
+    environment:
+      ELASTICSEARCH_URL: 'http://elasticsearch:9200'
+    # links:
+      # - "elasticsearch"
+    ports:
+      - 5601:5601
+
+  elasticsearch:
+    image: elasticsearch
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/elasticsearch/data/:/usr/share/elasticsearch/data"
+       # - "/Users/kevin/bigdata/elasticsearch/config/:/usr/share/elasticsearch/config"
+    ports:
+      - 9200:9200
+      - 9300:9300
+
