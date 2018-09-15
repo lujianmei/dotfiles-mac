@@ -1,3 +1,6 @@
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kevin/.oh-my-zsh
 # Set name of the theme to load.
@@ -78,9 +81,9 @@ plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwr
 #export JAVA_HOME=/home/kevin/software/develop/jdk1.7.0_25
 #export DOCKER_HOST=tcp://127.0.0.1:4243
 export HASKELL_HOME=/Users/kevin/Library/Haskell
-export TEXLIVE_HOME=/usr/local/texlive/2015/bin/x86_64-darwin
-export TEXLIVE_MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man
-export TEXLIVE_INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info
+export TEXLIVE_HOME=/usr/local/texlive/2018/bin/x86_64-darwin
+export TEXLIVE_MANPATH=/usr/local/texlive/2018/texmf-dist/doc/man
+export TEXLIVE_INFOPATH=/usr/local/texlive/2018/texmf-dist/doc/info
 export EMACS=/usr/local/Cellar/emacs-plus/25.3/bin/emacs-25.3
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH

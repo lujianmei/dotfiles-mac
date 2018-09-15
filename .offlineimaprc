@@ -43,7 +43,7 @@ ssl = on
 #reference = Mail
 remotehost = imap.qiye.163.com
 remoteuser = lu.jianmei@trs.com.cn
-remotepass=ljm_07102049610
+remotepass=password
 # imap protocol port: 993 for ssl, 143 for none ssl
 remoteport = 993
 
