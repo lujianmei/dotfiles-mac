@@ -38,3 +38,9 @@
 [submodule "work-envs/greenplum-docker"]
 	path = work-envs/greenplum-docker
 	url = git@github.com:lujianmei/greenplum-docker.git
+[submodule "work-envs/hadoop-docker"]
+	path = work-envs/hadoop-docker
+	url = git@github.com:lujianmei/docker-hadoop.git
+[submodule "work-envs/janusgraph-docker"]
+	path = work-envs/janusgraph-docker
+	url = git@github.com:lujianmei/janusgraph-docker.git

@@ -10,7 +10,8 @@ services:
     hostname: mdw
     volumes:
      #- "workspace:/workspace/data-scientist-notes"
-     - "/Users/kevin/bigdata/greenplum-analytics-data/:/var/lib/gpdb"
+     # - "/Users/kevin/bigdata/greenplum-analytics-data/:/var/lib/gpdb"
+     - "/Users/kevin/bigdata/greenplum-analytics-data/:/data"
      # - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
     # restart: always
     ports:

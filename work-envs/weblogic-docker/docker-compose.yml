@@ -1,0 +1,21 @@
+# Use root/example as user/password credentials
+version: '3.1'
+        # login info:
+        # User: weblogic
+        # Pass: welcome1
+services:
+
+  weblogic-web:
+    image: ismaleiva90/weblogic12
+    # volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     # - "/Users/kevin/bigdata/mysql-data/:/var/lib/mysql"
+     # - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
+    restart: always
+    ports:
+      - 49163:7001
+      - 49164:7002
+      - 49165:5556
+        
+        
+
