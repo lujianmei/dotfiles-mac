@@ -84,7 +84,7 @@ export HASKELL_HOME=/Users/kevin/Library/Haskell
 export TEXLIVE_HOME=/usr/local/texlive/2018/bin/x86_64-darwin
 export TEXLIVE_MANPATH=/usr/local/texlive/2018/texmf-dist/doc/man
 export TEXLIVE_INFOPATH=/usr/local/texlive/2018/texmf-dist/doc/info
-export EMACS=/usr/local/Cellar/emacs-plus/25.3/bin/emacs-25.3
+export EMACS=/usr/local/opt/emacs-plus/bin/emacs
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
 
@@ -190,9 +190,9 @@ alias vi="/usr/local/Cellar/neovim/0.3.1/bin/nvim"
 # alias v="/usr/local/Cellar/vim/8.0.1250/bin/vim"
 # alias newemacs="/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/dotemacs/init.el --eval \"(run-hooks 'after-init-hook)\""
 
-alias es="/usr/local/Cellar/emacs-plus/25.3/bin/emacs --eval \"(setq server-name \"x\")\" --daemon"
-alias e="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
-alias ec="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
+alias es="/usr/local/opt/emacs-plus/bin/emacs --eval \"(setq server-name \"x\")\" --daemon"
+alias e="/usr/local/opt/emacs-plus/bin/emacsclient -nw"
+alias ec="/usr/local/opt/emacs-plus/bin/emacsclient -nw"
 alias aliyunk="ssh kevin@39.104.118.30"
 alias aliyunr="ssh root@39.104.118.30"
 alias aliyunt="ssh trs@39.104.118.30"
