@@ -41,3 +41,6 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/lujianmei/.tmux.git
+[submodule "spacehammer"]
+	path = spacehammer
+	url = https://github.com/lujianmei/spacehammer
