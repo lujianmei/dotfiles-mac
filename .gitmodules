@@ -41,3 +41,6 @@
 [submodule "work-envs/janusgraph-docker"]
 	path = work-envs/janusgraph-docker
 	url = https://github.com/lujianmei/janusgraph-docker.git
+[submodule ".tmux"]
+	path = .tmux
+	url = https://github.com/lujianmei/.tmux.git
