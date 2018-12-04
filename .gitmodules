@@ -8,9 +8,6 @@
 [submodule ".spacevim.d"]
 	path = .spacevim.d
 	url = https://github.com/lujianmei/.spacevim.d
-[submodule "spacehammer"]
-	path = spacehammer
-	url = https://github.com/lujianmei/spacehammer.git
 [submodule "work-envs/data-science-env"]
 	path = work-envs/data-science-env
 	url = https://github.com/lujianmei/data-science-env.git
