@@ -8,9 +8,6 @@
 [submodule ".spacevim.d"]
 	path = .spacevim.d
 	url = https://github.com/lujianmei/.spacevim.d
-[submodule "work-envs/data-science-env"]
-	path = work-envs/data-science-env
-	url = https://github.com/lujianmei/data-science-env.git
 [submodule "work-envs/gpdb-docker"]
 	path = work-envs/gpdb-docker
 	url = https://github.com/lujianmei/gpdb-docker.git

@@ -119,15 +119,15 @@ export ANDROID_NDK_HOME=/Users/kevin/develop/android/android-ndk-r10e
 export ANT_HOME=/Users/kevin/develop/apache-ant-1.9.4/
 export EDITOR=nvim
 #添加JDK的环境变量
-export JAVA_6_HOME=/Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Home
-export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home
 #默认JDK1.7
 export JAVA_HOME=$JAVA_8_HOME
 #alias命令动态切换JDK版本  
-alias jdk6="export JAVA_HOME=$JAVA_6_HOME"  
-alias jdk7="export JAVA_HOME=$JAVA_7_HOME"
+# alias jdk6="export JAVA_HOME=$JAVA_6_HOME"
+# alias jdk7="export JAVA_HOME=$JAVA_7_HOME"
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
 
 
 #export WORKON_HOME=~/.virtualenvs
@@ -466,10 +466,10 @@ export GVM_DIR="/home/kevin/.gvm"
 
 
 
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/dotfiles-mac/.tmux/tmuxinator.zsh
-
+source ~/dotfiles-mac/.iterm2_shell_integration.zsh
 
 # added by travis gem
 [ -f /Users/kevin/.travis/travis.sh ] && source /Users/kevin/.travis/travis.sh
