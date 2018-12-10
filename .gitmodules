@@ -41,3 +41,6 @@
 [submodule "spacehammer"]
 	path = spacehammer
 	url = https://github.com/lujianmei/spacehammer
+[submodule "work-envs/data-science-env"]
+	path = work-envs/data-science-env
+	url = https://github.com/lujianmei/data-science-env
