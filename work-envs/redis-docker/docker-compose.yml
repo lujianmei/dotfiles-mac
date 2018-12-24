@@ -12,7 +12,7 @@ services:
       - "/Users/kevin/bigdata/redis/conf:/usr/local/etc/redis/"
     restart: always
     ports:
-      - 6379:6379
+      - 6380:6379
     environment:
       MYSQL_ROOT_PASSWORD: trsadmin
 

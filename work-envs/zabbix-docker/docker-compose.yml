@@ -1,0 +1,62 @@
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+version: '3.0'
+
+services:
+  zabbix-server:
+    image: zabbix/zabbix-web-nginx-mysql
+    container_name: zabbix-server
+    # volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     # - "/Users/kevin/develop-env/zabbix:/usr/lib/zabbix/"
+     # - "$PWD:/usr/init/"
+    environment:
+      DB_SERVER_HOST: "zabbix-mysql-db"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "trsadmin"
+      ZBX_SERVER_HOST: "localhost"
+      PHP_TZ: "Asia/Shanghai"
+    ports:
+      - "8089:80"
+     # command detail can be found at: https://hub.docker.com/r/jupyter/datascience-notebook/
+     # python -c "import IPython;print IPython.lib.passwd()" to general a password
+    #command: start-singleuser.sh --NotebookApp.base_url=/workspace/data-scientist-notes --NotebookApp.password='sha1:e8afeb79be50:67f125bd5d6f4c4db812e56cd79d3ef715356b27'
+    # command: start-notebook.sh --NotebookApp.password='sha1:e8afeb79be50:67f125bd5d6f4c4db812e56cd79d3ef715356b27' 
+      # - 
+    hostname: 'zabbix-server'
+    depends_on:
+      - zabbix-mysql-db
+    #   - redis
+    #   - graphite
+    networks:
+      - front-tier
+    links:
+      - 'zabbix-mysql-db:zabbix-mysql-db'
+    #   - 'graphite:graphite.host'
+    #   - 'redis:redis.host'
+
+  zabbix-mysql-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: zabbix-mysql-db
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+      - "/Users/kevin/bigdata/zabbix-mysql-data/:/var/lib/mysql"
+      - "/Users/kevin/bigdata/zabbix-mysql-conf/:/etc/mysql/conf.d/"
+    restart: always
+    hostname: 'zabbix-mysql-db'
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: trsadmin
+      MYSQL_DATABASE: zabbix
+    networks:
+      - front-tier
+
+
+
+networks:
+  front-tier:
+    driver: bridge
+
