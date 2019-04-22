@@ -65,7 +65,7 @@ BULLETTRAIN_PROMPT_ORDER=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git autojump emacs github z brew brew-cask github osx mvn tmux adb docker docker-compose python virtualenv virtualenvwrapper web-search)
-plugins=(git autojump emacs github z osx mvn tmux python virtualenv virtualenvwrapper django)
+plugins=(git nginx autojump go github z osx mvn tmux python virtualenv virtualenvwrapper django)
 
 # User configuration
 
@@ -84,16 +84,21 @@ export HASKELL_HOME=/Users/kevin/Library/Haskell
 export TEXLIVE_HOME=/usr/local/texlive/2018/bin/x86_64-darwin
 export TEXLIVE_MANPATH=/usr/local/texlive/2018/texmf-dist/doc/man
 export TEXLIVE_INFOPATH=/usr/local/texlive/2018/texmf-dist/doc/info
-export EMACS=/usr/local/opt/emacs-plus/bin/emacs
+export emacs=/usr/local/opt/emacs-plus/bin/emacs
 #export MANPATH=/usr/share/texmf-dist/doc/man:$MANPATH
 #export INFOPATH=/usr/texmf-dist/doc/info:$INFOPATH
+export NGINX_HOME=/usr/local/opt/nginx
+export MAVEN_HOME=/Users/kevin/develop-env/apache-maven-3.6.0
 
 export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
 export DYLD_LIBRARY_PATH=/Users/kevin/workspace/instantclient_11_2
 export PG_HOME=/Users/kevin/develop/PostgreSQL/
 #export PGDATA=/opt/postgresql/data
 #export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3.6"
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3.7"
+
+export ODPSCMD_HOME=/Users/kevin/bigdata/applications/odpscmd
+
 #
 # move from .bashrc
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -109,7 +114,7 @@ export ANACONDA_HOME=/Users/kevin/Library/anaconda
 
 export GRADLE_HOME=/usr/local/Cellar/gradle/4.9/
 
-export GOPATH=~/.go
+export GOROOT=/usr/local/go/
 export RUBY=/usr/local/Cellar/ruby/2.2.3/bin
 export GEM_HOME=$HOME/.gem
 export SPRING_ROO_HOME=~/workspace/spring-roo-2.0.0.RELEASE/
@@ -143,14 +148,14 @@ export MYSQLXPB_PROTOC=/usr/local/opt/protobuf/bin/protoc
 
 export DOCKER_HOME="/Applications/Docker.app/Contents/Resources"
 export ECLIM_HOME="~/develop/eclipse/Eclipse.app/Contents/eclipse/"
-export GOPATH="$HOME/.go/"
+export GOPATH="$HOME/workspace/gopath/"
 
 #export path="$haskell_home/bin:$java_homebin:$make381_home/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kevin/archlinux-config/shell/:$anaconda3:$idea_home/bin/:$jetty_home/bin/:$active_home/bin"
-export PATH="$SPRING_ROO_HOME/bin:$GRADLE_HOME/bin:/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$gopath/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python3/3.6.2/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
+export PATH="$ODPSCMD_HOME/bin:$SPRING_ROO_HOME/bin:$GOROOT/bin:$NGINX_HOME/sbin/:$GRADLE_HOME/bin:/Users/kevin/dotfiles-mac/shells/$PG_HOME:$haskell_home/bin:$GOPATH/bin/:/usr/local/sbin/:/usr/local/bin/:$anaconda_home/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$idea_home/bin/:$jetty_home/bin/:$active_home/bin:/usr/local/cellar/python/3.7.3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/sbin:/bin:/usr/bin/:/usr/sbin/:$EMACS/bin/"
 # export manpath="/usr/local/man:$manpath"
 
 export SVN_EDITOR REQUEST_METHOD LD_LIBRARY_PATH CASK GREP_OPTION
-export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME/bin:$DOCKER_HOME/bin:$ECLIPSE_HOME"
+export PATH="$PATH:$TEXLIVE_HOME:$TEXLIVE_MANPATH:$TEXLIVE_INFOPATH:$GRADLE_HOME/bin:$MY_SHELL/:$MAVEN_HOME/bin:$RUBY:$GEM_HOME/bin:$CASK:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_NDK_HOME:$ANT_HOME/bin:$DOCKER_HOME/bin:$ECLIPSE_HOME"
 
 # add npm install for global
 export PATH="$HOME/.npm-packages/bin:$PATH"
@@ -182,10 +187,10 @@ export editor='nvim'
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias n="/usr/local/Cellar/neovim/0.3.1/bin/nvim"
-alias nv="/usr/local/Cellar/neovim/0.3.1/bin/nvim"
-alias v="/usr/local/Cellar/neovim/0.3.1/bin/nvim"
-alias vi="/usr/local/Cellar/neovim/0.3.1/bin/nvim"
+alias n="/usr/local/Cellar/neovim/0.3.4/bin/nvim"
+alias nv="/usr/local/Cellar/neovim/0.3.4/bin/nvim"
+alias v="/usr/local/Cellar/neovim/0.3.4/bin/nvim"
+alias vi="/usr/local/Cellar/neovim/0.3.4/bin/nvim"
 # alias vi="/usr/local/Cellar/vim/8.0.1250/bin/vim"
 # alias v="/usr/local/Cellar/vim/8.0.1250/bin/vim"
 # alias newemacs="/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/dotemacs/init.el --eval \"(run-hooks 'after-init-hook)\""
@@ -288,7 +293,7 @@ cleartrash()
  /bin/rm -rf ~/.trash/.* 2>/dev/null
  fi
 }
-alias emacs="export LC_CTYPE=zh_CN.UTF-8;emacs"
+# alias emacs="export LC_CTYPE=zh_CN.UTF-8;emacs"
 
 #Productivity
 #alias ls="ls -al -color"
@@ -474,3 +479,15 @@ source ~/dotfiles-mac/.iterm2_shell_integration.zsh
 # added by travis gem
 [ -f /Users/kevin/.travis/travis.sh ] && source /Users/kevin/.travis/travis.sh
 export IDEA_PROPERTIES=/Users/kevin/idea.properties
+export PATH="/usr/local/opt/openresty/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openresty-openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openresty-openssl/include"
+export CRYPTO_INCDIR=/usr/local/opt/openssl
+export OPENSSL_DIR=/usr/local/opt/openssl
+PATH="/Users/kevin/workspace/lua-apps/kong/bin:$PATH"
+export PATH="/Users/kevin/workspace/github/code2ebook:$PATH"
+PATH="/usr/local/Cellar/ctags/5.8_1/bin:$PATH"
+
+# add config for nix
+  . /Users/kevin/.nix-profile/etc/profile.d/nix.sh
+

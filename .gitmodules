@@ -44,3 +44,6 @@
 [submodule "work-envs/data-science-env"]
 	path = work-envs/data-science-env
 	url = https://github.com/lujianmei/data-science-env
+[submodule "work-envs/node-docker-good-defaults"]
+	path = work-envs/node-docker-good-defaults
+	url = https://github.com/lujianmei/node-docker-good-defaults

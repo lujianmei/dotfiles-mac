@@ -48,6 +48,9 @@ windows:
   - vim:
       - cd ~/
       - n
+  - emacs:
+      - emacs &
+
   # - emacs: emacs -nw
     #- /usr/local/Cellar/emacs-plus/25.3/bin/emacs -nw
      # Synchronize all panes of this window, can be enabled before or after the pane commands run.

@@ -1,0 +1,90 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  exo-community:
+    image: exoplatform/exo-community
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/exo-platform/exo-data/:/srv/exo"
+    restart: always
+    # network: backend
+    links:
+       - "mysql-db:mysql-db"
+       - "mongodb-db:mongodb-db"
+    depends_on:
+       - mysql-db
+       - mongodb-db
+    ports:
+     - 8080:8080
+    environment:
+      EXO_DATA_DIR: /src/exo
+      EXO_ADDONS_LIST: exo-chat:$${CHAT_VERSION}
+      EXO_JVM_LOG_GC_ENABLED: "true"
+      EXO_DB_TYPE: mysql
+      EXO_DB_HOST: mysql-db
+      EXO_DB_POST: 3306
+      EXO_DB_NAME: exo
+      EXO_DB_USER: root
+      EXO_DB_PASSWORD: trsadmin
+      EXO_DB_TIMEOUT: 20
+      EXO_MONGO_HOST: mongodb-db
+      EXO_MONGO_USERNAME: root
+      EXO_MONGO_PASSWORD: trsadmin
+      EXO_MONGO_DB_NAME: exo
+      EXO_MONGO_TIMEOUT: 20
+      # EXO_ES_HOST: elasticsearch-db
+      # EXO_ES_HOST: 9200
+      # EXO_ES_USERNAME: root
+      # EXO_ES_PASSWORD: trsadmin
+      # EXO_ES_TIMEOUT: 20
+#
+  mysql-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    # network: backend
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/mysql-data/:/var/lib/mysql"
+     - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: trsadmin
+
+
+  # elasticsearch-db:
+    # image: elasticsearch:latest
+    # network: backend
+    # links:
+      # - "elasticsearch-db:elasticsearch-db"
+    # ports:
+      # - 9200:9200
+      # - 9300:9300
+#
+#
+  mongodb-db:
+    image: mongodb:latest
+    # network: backend
+    volumes:
+      - "/Users/kevin/bigdata/mongodb:/data/db"
+    # links:
+      # - "mongodb-db:mongodb-db"
+    ports:
+      - 27017:27017
+  # adminer:
+    # image: adminer
+    # restart: always
+    # network: backend
+    # links:
+      # - "mysql-db:db"
+    # environment:
+      # ADMINER_PLUGINS: 'tables-filter tinymce'
+      # ADMINER_DESIGN: 'nette'
+    # ports:
+      # - 8085:8085
+#
+# networks:
+  # backend:

@@ -1,0 +1,51 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  exo-enterprise:
+    image: exoplatform/exo-trail
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/exo-platform/exo-data/:/srv/exo"
+    restart: always
+    ports:
+      - 8581:8080
+    environment:
+      EXO_DATA_DIR: /src/exo
+      EXO_DB_TYPE: mysql
+      EXO_DB_HOST: 127.0.0.1
+      EXO_DB_POST: 3306
+      EXO_DB_NAME: root
+      EXO_DB_PASSWORD: trsadmin
+      EXO_DB_TIMEOUT: 2000
+      # EXO_MONGO_HOST: mongodb-db
+      # EXO_MONGO_USERNAME: root
+      # EXO_MONGO_PASSWORD: trsadmin
+      # EXO_MONGO_DB_NAME: exo
+      # EXO_MONGO_TIMEOUT: 2000
+#
+  # elasticsearch-db:
+    # image: elasticsearch:latest
+    # links:
+      # - "elasticsearch-db:elasticsearch-db"
+    # ports:
+      # - 27017:27017
+#
+#
+  # mongodb-db:
+    # image: mongodb:latest
+    # links:
+      # - "mongodb-db:mongodb-db"
+    # ports:
+      # - 27017:27017
+  # adminer:
+    # image: adminer
+    # restart: always
+    # links:
+      # - "mysql-db:db"
+    # environment:
+      # ADMINER_PLUGINS: 'tables-filter tinymce'
+      # ADMINER_DESIGN: 'nette'
+    # ports:
+      # - 8085:8085

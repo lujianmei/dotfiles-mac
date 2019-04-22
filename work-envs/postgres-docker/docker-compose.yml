@@ -1,0 +1,29 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  postgres-db:
+    image: postgres:latest
+    volumes:
+     #- "workspace:/workspace/data-scientist-notes"
+     - "/Users/kevin/bigdata/postgres-data/:/var/lib/postgresql/data"
+     - "/Users/kevin/bigdata/mysql-conf/:/etc/mysql/conf.d/"
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: trsadmin
+      PGDATA: /var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    links:
+      - "postgres-db:db"
+    environment:
+      ADMINER_PLUGINS: 'tables-filter tinymce'
+      ADMINER_DESIGN: 'nette'
+    ports:
+      - 8185:8085
